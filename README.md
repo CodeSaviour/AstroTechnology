@@ -6,7 +6,7 @@ With the AstroServer, users can easily access additional modules by simply typin
 
 For the time being, AstroTechnologies is currently giving for free our `PlayerMisc_V2` module that is working with `AstroServer`
 
-AstroServer is an **open source** project and is being developed by our experienced team led by **CodeSaviour#9999**. At AstroTechnologies, we are committed to developing innovative solutions that meet the evolving needs of our clients.
+AstroServer is an **open source** project and is being developed by **CodeSaviour#9999**. At AstroTechnologies, we are committed to developing innovative solutions that meet the evolving needs of our clients.
 
 
 / Other AstroTechnologies are **not open sourced** and are actively being developed for Project Enclosed on roblox.
