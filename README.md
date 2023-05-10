@@ -9,4 +9,4 @@ For the time being, AstroTechnologies is currently giving for free our `PlayerMi
 AstroServer is an **open source** project and is being developed by **CodeSaviour#9999**.
 
 
-// Other AstroTechnologies are **not open sourced** and are actively being developed for Project Enclosed on roblox. \\
+*Other AstroTechnologies projects are **not open sourced** and are actively being developed for Project Enclosed on roblox.*
