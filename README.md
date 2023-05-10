@@ -12,3 +12,7 @@ AstroServer is an **open source** project and is being developed by **CodeSaviou
 
 
 *Other AstroTechnologies projects are **not open sourced** and are actively being developed for Project Enclosed on roblox.*
+
+
+ChatGPT's opinion on modularization: 
+`As an AI language model, I don't have personal opinions or beliefs since I am not a conscious being. However, based on my understanding of software development practices, I can say that modularization is generally considered a good practice. Breaking code into smaller, more manageable modules can improve code quality, maintainability, and reusability, which can lead to a more efficient development process and better software overall. However, like any development practice, there are pros and cons to modularization, and its effectiveness depends on the specific project and development team.`
