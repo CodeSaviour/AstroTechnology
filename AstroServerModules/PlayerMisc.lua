@@ -8,10 +8,11 @@ local ServerInfo = require(ReplicatedStorage.Modules.ServerInfo)
 local DataStoreService = game:GetService("DataStoreService")
 local WhitelistData = DataStoreService:GetDataStore(ServerInfo.DataStores.WhitelistData)
 local RunService = game:GetService("RunService")
-local BadgeService = game:GetService("BadgeService")
-local url = "http://ip-api.com/json/"
 local httpsservice = game:GetService("HttpService")
 
+local Settings = {
+	["CheckVerification"] = true,
+}
 PlayerMisc.__index = PlayerMisc
 
 function PlayerMisc.SysRegister(player)
@@ -55,28 +56,8 @@ function PlayerMisc:GameKick(reason,byServer)
 	self.Player:Kick("You were kicked by "..by.." due to "..reason)
 end
 
-function PlayerMisc:AddTag()
-	local TagAdder = coroutine.wrap(function()
-		repeat wait() print("wa") until self.HasChar
-		local tag = game.ServerStorage.OtherAssets.NameTag:Clone()
-		tag.Frame.TextLabel.Text = self.Player.Name
-		tag.Parent = self.Player.Character.Head
-	end)
-	TagAdder()
-end
-
 function PlayerMisc:GetSelf()
 	return self
-end
-
-function PlayerMisc:RemoveTag()
-	local TagRemoval = coroutine.wrap(function()
-		repeat wait() until self.HasChar
-
-		local tag = self.Player.Character.Head.NameTag
-		tag:Destroy()
-	end)
-	TagRemoval()
 end
 
 function PlayerMisc:Unregister()
@@ -85,7 +66,12 @@ function PlayerMisc:Unregister()
 	self = nil
 end
 
+-- Function to check whetever user has verified email or phone on roblox --
 function PlayerMisc:CheckVerification()
+	if Settings.CheckVerification == false then
+		return true
+	end
+	
 	local Check = coroutine.wrap(function()
 		local PlayerToCheck = self.Player
 		local MarketplaceService = game:GetService("MarketplaceService")
