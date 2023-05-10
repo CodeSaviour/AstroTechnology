@@ -84,9 +84,7 @@ function PlayerMisc:CheckVerification()
 		end)
 
 		if not success or not result then
-			self:Unregister()
-			PlayerToCheck.PlayerGui.FullScreen.Enabled = true
-			tps:Teleport(13089410303, PlayerToCheck)
+			self:GameKick("needs to be verified",true)
 		end
 	end)
 	
@@ -112,24 +110,6 @@ PlayerMisc.init = function(name)
 		Players[player.Name] = PlayerMisc.SysRegister(player)
 		logPlayerRegistration(player)
 		Players[player.Name]:CheckVerification()
-		if not game.ReplicatedStorage.Values:FindFirstChild("ServerLocation") then
-			local initServerLocation = coroutine.wrap(function()
-				local a = Instance.new("StringValue")
-				a.Name = "ServerLocation"
-				a.Parent = game.ReplicatedStorage.Values
-				local success,errormessage = pcall(function()
-					task.wait(2) 
-					local getasyncinfo = httpsservice:GetAsync(url)
-					local decodedinfo = httpsservice:JSONDecode(getasyncinfo)
-					game.ReplicatedStorage.Values.ServerLocation.Value = decodedinfo["country"]..", "..decodedinfo["city"]
-				end)
-
-				if errormessage then
-					warnAstro(errormessage)
-				end
-			end)
-			initServerLocation()
-		end
 		player.CharacterAdded:Connect(function(char)
 			Players[player.Name].HasChar = true
 			Players[player.Name]:AddTag()
