@@ -1,4 +1,4 @@
-# AstroTechnologies
+# AstroServer
 
 AstroServer, a Lua-based server modularization script. A technology to integrate multiple Lua scripts into one script and multiple modules. 
 
