@@ -43,8 +43,8 @@ local function initPlugins()
 	local startTime = tick()
 	local loadedCount = 0
 
-	local priorityFolder = script.Priority
-	if priorityFolder then
+	if script:FindFirstChild("Priority") then
+		local priorityFolder = script.Priority
 		for _, moduleScript in ipairs(priorityFolder:GetDescendants()) do
 			if moduleScript:IsA("ModuleScript") and not moduleScript:GetAttribute("Override") then
 				local moduleStartTime = tick()
