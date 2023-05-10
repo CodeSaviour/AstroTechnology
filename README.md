@@ -6,6 +6,8 @@ With the AstroServer, users can easily access additional modules by simply typin
 
 For the time being, AstroTechnologies is currently giving for free our `PlayerMisc_V2` module that is working with `AstroServer`
 
+**AstroServer** currently has the ability to give other modules a bigger priority over other, simply create folder named "Priority" under the AstroServer, and place every module you want to initialize first there.
+
 AstroServer is an **open source** project and is being developed by **CodeSaviour#9999**.
 
 
