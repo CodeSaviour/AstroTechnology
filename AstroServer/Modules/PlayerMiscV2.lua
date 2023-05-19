@@ -112,7 +112,6 @@ PlayerMisc.init = function(name)
 		Players[player.Name]:CheckVerification()
 		player.CharacterAdded:Connect(function(char)
 			Players[player.Name].HasChar = true
-			Players[player.Name]:AddTag()
 		end)
 	end)
 end
