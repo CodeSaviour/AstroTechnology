@@ -1,5 +1,4 @@
 -- AstroServer V4
--- Designed for: Enclosed Survival
 -- Credits: CodeSaviour
 
 local LoadedPlugins = {}
