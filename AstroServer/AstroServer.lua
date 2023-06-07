@@ -92,8 +92,8 @@ local function initServer()
 				end
 			end
 		end
-		
-		_G.warnServer(("Loaded %d plugins in %.1fms"):format(loadedCount, (tick() - startTime) * 1000))
+
+		_G.warnServer(("Initialized Server with %d plugins in %.1fms"):format(loadedCount, (tick() - startTime) * 1000))
 	end)
 	if fail then
 		_G.warnServer("SERVER BOOT ERROR \n"..fail)
