@@ -30,7 +30,7 @@ end
 
 _G.WaitForServerPlugin = function(pluginName, overrideTime)
 	if not pluginName then
-		_G._G.warnServer("Plugin name was not specified.")
+		_G.warnServer("Plugin name was not specified.")
 		return
 	end
 
